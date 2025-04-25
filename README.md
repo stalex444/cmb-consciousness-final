@@ -22,14 +22,18 @@ The repository also includes the final robust fractal analysis code that success
   - Planck Legacy Archive: 2,507 data points
   - NASA's LAMBDA archive (WMAP): 1,199 data points
 
-### Information Architecture Test
-The Information Architecture Test analyzes how different mathematical constants organize the hierarchical information structure in CMB data:
+### Hierarchical Information Architecture Test
+The Hierarchical Test analyzes how different mathematical constants organize the hierarchical information structure in CMB data:
 
 - Tests six mathematical constants: phi (golden ratio), sqrt2, sqrt3, ln2, e, and pi
-- Previous findings:
-  - Square Root of 2 appears to be the dominant organizing principle across scales in both datasets
-  - Scale 55 shows extremely strong sqrt2 specialization in both WMAP (1.2541) and Planck (1.5465) datasets
-  - WMAP data showed statistical significance for Golden Ratio (φ): Score = 1.0203, p-value = 0.044838
+- Completed with 10,000 simulations on both datasets simultaneously
+- Key findings from full analysis:
+  - Square Root of 2 is confirmed as the dominant organizing principle with 157,507 scale pairs in Planck data
+  - Scale 55 shows significant relationships across multiple constants (Scale 38-55: z=2.077, p=0.019)
+  - Most significant relationship: Scale 377-534 with sqrt2 (z=3.194, p=0.0007)
+  - Fibonacci numbers appear prominently in significant scale relationships
+
+Full results are documented in [docs/hierarchical_analysis/hierarchical_test_results.md](./docs/hierarchical_analysis/hierarchical_test_results.md)
 
 ## Results
 
@@ -44,8 +48,8 @@ The analysis consists of two key components, both designed to run on WMAP and Pl
 # Run the final fractal analysis on both datasets (reproduces significant results)
 python scripts/robust_cmb_fractal.py
 
-# Run the Information Architecture Test with 10,000 simulations
-python run_information_architecture_test.py --surrogates 10000
+# Run the Hierarchical Test with 10,000 simulations
+python scripts/hierarchical_analysis.py --surrogates 10000
 ```
 
 ### Recommended Order
