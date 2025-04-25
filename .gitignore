@@ -1,0 +1,47 @@
+# Data directories and results
+/data/
+/results/
+/publication_*
+*_results*/
+**/checkpoints/
+*_checkpoint*.json
+
+# Python artifacts
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+cmb-env/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# Log files
+*.log
+logs/
+*.txt
+
+# Images & binary files
+*.png
+*.jpg
+*.jpeg
+*.pdf
+*.gif
+
+# Zenodo upload area
+zenodo_upload/
+
+# Large JSON files (these should go on Zenodo)
+*_results.json
+
+# OS specific
+.DS_Store
+Thumbs.db
